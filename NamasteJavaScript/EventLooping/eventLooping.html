@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEventLooping</title>
+  </head>
+  <body>
+    <h1>Namaste JavaScript</h1>
+    <button id="btn">Click me</button>
+    <!-- <script>
+      console.log("Start");
+      document.getElementById("btn").addEventListener("click", function cbF() {
+        console.log("CallBack is hit");
+      });
+      console.log("End");
+    </script> -->
+
+    <script>
+      console.log("Start");
+      setTimeout(function cbT() {
+        console.log("in SetTimeOut");
+      }, 5000);
+      fetch("https://google.com").then(function cbF() {
+        console.log("Fetch function called");
+      });
+      console.log("End");
+    </script>
+  </body>
+</html>

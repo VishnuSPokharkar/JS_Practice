@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example of making count using Closure</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <button id="clickMe">Click Me</button>
+
+    <script>
+      function wrapeIt() {
+        let count = 0;
+        document
+          .getElementById("clickMe")
+          .addEventListener("click", function xyz() {
+            console.log("Button is clicked", ++count);
+          });
+      }
+    </script>
+  </body>
+</html>

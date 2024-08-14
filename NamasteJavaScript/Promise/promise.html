@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample code for Promise</title>
+  </head>
+  <body>
+    <script>
+      const cart = ["Shues", "Pants", "Kurtas"];
+
+      // This is creating a Callback hell
+
+      // createOrder(cart, function (orderId) {
+      //     proceedToPayment(orderId, function (paymentInfo) {
+      //       showOrderSummary(paymentInfo, function (paymentInfo) {
+      //         updateWalletStatus();
+      //       });
+      //     });
+      //   });
+
+      //To overcome we can use promises
+      // createOrder (cart)
+      // .then(function (orderId){
+      //    return proceedToPayment(orderId);
+      // })
+      // .then(function (paymentInfo){
+      //     return showOrderSummary(paymentInfo);
+      // })
+      // .then(function () {
+      //     return updateWalletStatus();
+      // });
+
+      //Also we can write this code ushing Arrow function
+      // createOrder (cart)
+      // .then((orderId)=> proceedToPayment(orderId))
+      // .then((paymentInfo)=> showOrderSummary(paymentInfo))
+      // .then(() => pdateWalletStatus());
+    </script>
+  </body>
+</html>

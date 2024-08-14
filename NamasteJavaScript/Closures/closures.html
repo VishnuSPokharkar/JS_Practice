@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body>
+    <h1>Closure tuto</h1>
+    <script> // here we just get 6 five times becaouse of setTimeOut fucn will take i value from same place 
+        // function x(){
+        //     for(var i= 1; i<= 5; i++){
+        //         setTimeout(function(){
+        //             console.log(i)
+        //         }, i * 1000);
+        //     }
+        //     console.log("Print 1 to 5 numbers each after 1 sec on console");
+        // }
+        // x();
+</script>
+<script>// we can solve this problom by using let insted of var
+        //  function x(){
+        //     for(let i= 1; i<= 5; i++){
+        //         setTimeout(function(){
+        //             console.log(i)
+        //         }, i * 1000);
+        //     }
+        //     console.log("Print 1 to 5 numbers each after 1 sec on console");
+        // }
+        // x();
+</script>
+<script> //we can solve this problom by putting setTimeout inside another function 
+         function x(){
+            for(var i= 1; i<= 5; i++){
+                function callSetTimeOut (x){
+                    setTimeout(function(){
+                    console.log(x)
+                    }, x * 1000);
+                }  
+                callSetTimeOut(i);
+            }
+            console.log("Print 1 to 5 numbers each after 1 sec on console");
+        }
+        x();
+</script>
+</body>
+</html>
